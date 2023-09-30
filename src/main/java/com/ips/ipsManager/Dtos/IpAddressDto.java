@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CategoryDto {
+public class IpAddressDto {
     private String ipAddress; 
     private String status;
     private String id;

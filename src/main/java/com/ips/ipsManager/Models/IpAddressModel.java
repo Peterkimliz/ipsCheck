@@ -14,7 +14,7 @@ import lombok.*;
 @Builder
 @Document(collection = "categories")
 
-public class Category {
+public class IpAddressModel {
     @Id
     private String id;
     private String ipAddress;
