@@ -12,12 +12,12 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @OpenAPIDefinition(
     info =@Info(
          contact = @Contact(
-            name = "Realtor",
+            name = "ippAddress",
             email = "jilokim8@gmail.com"
             
          ),
-         description = "Open Api documentation for realtor",
-         title = "OpenApi specification-Realtor",
+         description = "Open Api documentation for ippAddress",
+         title = "OpenApi specification-ippAddress",
          version ="1.0"
     ) 
     ,servers = {
