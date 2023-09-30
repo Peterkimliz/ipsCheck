@@ -11,9 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class CustomerRequest {
-    @Email(message = "Please enter avalid email")
     @NotBlank(message = "Customer name required")
     private String customerName;
+
+    @Email(message = "Please enter avalid email")
     @NotBlank(message = "Customer email required")
     private String email;
     
