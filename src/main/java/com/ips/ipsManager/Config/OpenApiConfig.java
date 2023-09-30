@@ -21,10 +21,10 @@ import io.swagger.v3.oas.annotations.servers.Server;
          version ="1.0"
     ) 
     ,servers = {
-        // @Server(
-        //     description = "Production ENV",
-        //     url = "https://peterlojisrealtor.onrender.com/"
-        // ),
+        @Server(
+            description = "Production ENV",
+            url = "https://ipchecker.onrender.com"
+        ),
         @Server(
             description = "Local ENV",
             url = "http://localhost:8080"
