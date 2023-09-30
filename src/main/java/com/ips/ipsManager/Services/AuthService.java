@@ -23,7 +23,6 @@ import com.ips.ipsManager.Security.UserDetailsImplementation;
 
 
 
-
 @Service
 public class AuthService {
     @Autowired

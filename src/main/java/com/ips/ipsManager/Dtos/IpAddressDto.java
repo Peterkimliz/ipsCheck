@@ -11,7 +11,7 @@ import lombok.*;
 public class IpAddressDto {
     private String ipAddress; 
     private String status;
-    private String id;
+    private Long id;
     private CustomerModel customerModel;
     
 }

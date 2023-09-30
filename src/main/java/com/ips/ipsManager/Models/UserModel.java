@@ -1,20 +1,23 @@
 package com.ips.ipsManager.Models;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-@Document(collection = "users")
+@Entity
 
 public class UserModel {
-    @Id
-    private String id;
+ @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String email;
     private String phone;

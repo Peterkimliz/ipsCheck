@@ -1,24 +1,28 @@
 package com.ips.ipsManager.Models;
-
-
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DocumentReference;
-
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collection = "categories")
+@Entity
+@Table(name = "ips")
 
 public class IpAddressModel {
-    @Id
-    private String id;
+ @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String ipAddress;
     private String status;
-    @DocumentReference(lazy = true)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private CustomerModel customerModel;
 }
